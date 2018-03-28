@@ -1,11 +1,11 @@
 package com.leibniz.server.repositories;
 
-import org.springframework.data.annotation.Id;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "scheduled_appointement")
+@Table(name = "scheduled_appointment")
 public class AppointmentRepository extends AbstractRepository{
 
     @Id
@@ -13,8 +13,14 @@ public class AppointmentRepository extends AbstractRepository{
     @Column(name = "scheduled_appointment_id")
     private long id;
     private Date appointement_datetime;
+
+    @Column(name = "scheduled_appointment_idservice")
     private long idService;
+
+    @Column(name = "scheduled_appointment_idprovider")
     private long idEmploye;
+
+    @Column(name = "scheduled_appointment_idclient")
     private long idClient;
 
     public long getId() {

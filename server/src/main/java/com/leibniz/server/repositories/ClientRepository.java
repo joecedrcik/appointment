@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class ClientRepository extends AbstractRepository implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="client_id")
     private long id;
 
@@ -18,7 +18,7 @@ public class ClientRepository extends AbstractRepository implements Serializable
     @Column(name = "client_name")
     private String name;
 
-    @Column(name = "client_name")
+    @Column(name = "client_phone")
     private String phone;
 
     public long getId() {

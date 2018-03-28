@@ -1,5 +1,7 @@
 package com.leibniz.server.repositories;
 
-public abstract class AbstractRepository {
+import java.io.Serializable;
+
+public abstract class AbstractRepository implements Serializable {
 
 }
